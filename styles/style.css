@@ -1,0 +1,191 @@
+:root {
+  --orange: #D2872C;
+  --gray: #766F68;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------Header------------------*/
+.header {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  display: none;
+}
+
+.header h2{
+  color: var(--orange);
+  font-size: 30px;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+}
+
+.header ul li{
+  padding: 0 10px;
+  font-size: 18px;
+ 
+}
+
+.header ul li a{
+  color: #222;
+  transition: ease-in-out .2s;
+}
+
+.header ul li a:hover{
+  color: var(--orange)
+}
+
+/*--------Header------------------*/
+
+
+
+
+/*--------Main------------------*/
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-top: 40px;
+}
+
+.section-1 {
+  width: 600px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 9;
+}
+
+.section-1 h1{
+  font-size: 60px;
+  color: var(--gray);
+  
+  margin: 0 50px;
+}
+
+.section-1 span{
+  width: 400px;
+  font-size: 25px;
+  color: var(--gray);
+  
+  margin: 20px 50px;
+}
+
+.section-1 button{
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--orange);
+  margin: 20px 50px;
+  border: 0;
+  border-radius: 8px;
+  padding:10px 60px;
+
+  cursor: pointer;
+
+  transition: filter .2s;
+}
+
+.section-1 button:hover{
+  filter: brightness(0.9)
+}
+
+
+.section-2{
+  margin-left: -35%;
+  margin-top: 20px;
+}
+
+.section-2 img{
+  width: 600px;
+  
+}
+
+/*--------Main------------------*/
+
+
+
+/*------Responsive--------------*/
+
+.hiddem {
+  display: none;
+}
+
+@media(max-width: 430px){
+
+
+  .header .lista {
+    display: none;
+  }
+
+  .hamburger {
+    position: absolute;
+    display: inline-block;
+
+    right: 20px;
+    top: 27px;
+  }
+
+  .hamburger img {
+    width: 33px;
+    height: 33px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .section-2{
+    margin: 0 30px;
+  }
+  
+  .section-2 img{
+    width: 400px;
+  }
+
+  .section-1 {
+    width: 400px;
+    margin: 0 30px;
+  }
+
+  .section-1 h1{
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .section-1 span{
+    width: 280px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .section-1 button{
+    margin: 20px 85px;
+    text-align: center;
+  }
+}
+
+/*------Responsive--------------*/
